@@ -1,0 +1,174 @@
+
+@media (max-width: 1000px) {
+
+    h1.titulo-section {
+        text-align: center;
+        font-size: 2.8rem;
+    }
+
+    /* Estilo do menu */
+    header {
+        background-image: none;
+        background-color: var(--corPrimaria);
+    }
+
+    header .logotipo-cabecalho img {
+        max-width: 70px;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+
+    .btn-menu-mobile {
+        display: block;
+    }
+
+    /* Estilo do hero */
+    section.hero {
+        background-image: linear-gradient(to top, var(--corSecundaria) 99%, var(--corPrimaria) 1%);
+        padding: 130px 20px 0 20px;
+    }
+
+    .hero > .interface {
+        gap: 50px;
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+
+    .hero .img-hero {
+        line-height: 0;
+    }
+
+    .hero .img-hero img {
+        width: 355px;
+    }
+
+    .hero .txt-hero h1 {
+        font-size: 2rem;
+        font-weight: 300;
+    }
+
+    .hero .txt-hero h1 span {
+        font-weight: 600;
+        font-size: 2.5rem;
+    }
+
+    .hero .txt-hero p {
+        font-size: 1.1rem;
+        text-align: justify;
+        margin-bottom: 50px;
+    }
+
+    .hero .txt-hero button {
+        width: 200px;
+        height: 48px;
+    }
+
+    /* Estilo sobre mim */
+    section.sobre-mim {
+        padding: 80px 20px;
+    }
+
+    .sobre-mim > .interface {
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    .sobre-mim .btn-redes {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sobre-mim .img-sobre img {
+        max-width: 300px;
+    }
+
+    /* Estilo das habilidades */
+    section.habilidades {
+        padding: 80px 20px;
+    }
+
+    .habilidades article {
+        grid-template: 1fr 1fr 1fr / 1fr 1fr;
+        margin: 60px 0;
+    }
+
+    .habilidades .box-habilidades {
+        width: 150px;
+        margin: 0 auto;
+    }
+
+    .icon-habilidades h2 {
+        font-size: 1.1rem;
+    }
+
+    /* Estilo dos projetos */
+    section.projetos {
+        padding: 80px 30px;
+    }
+
+    .projetos .projetos-container {
+        grid-template: 1fr 1fr 1fr 1fr/ 1fr;
+    }
+
+    .projetos-container .projetos-box {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    /* Estilo do formulário */
+    section.contato {
+        padding: 80px 0;
+        background-color: var(--corSecundaria);
+    }
+
+    .contato > .interface {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contato .txt-contato p {
+        font-size: 1rem;
+    }
+
+    .contato form {
+        width: 100%;
+    }
+
+    .contato form input, .contato form textarea {
+        width: 330px;
+        font-size: 1rem;
+    }
+
+    .contato form .btn-enviar input {
+        width: 60%;
+    }
+
+    /* Estilo do footer */
+    footer > .interface {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    footer .btn-redes {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .btn-redes button {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    footer .logo-footer p {
+        font-size: 0.9rem;
+    }
+
+    footer .logo-footer img {
+        max-width: 170px;
+        margin-bottom: 40px;
+    }
+}

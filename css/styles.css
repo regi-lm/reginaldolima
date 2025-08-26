@@ -1,0 +1,516 @@
+* {
+    margin: 0; /* Para tirar toda a margem do documento HTML */
+    padding: 0; /* Para tirar todo o espaçamento interno do documento HTML */
+    box-sizing: border-box; /* Para limitar até onde os elementos podem se expandir no documento HTML */
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+    --corPrimaria: #00FF7F;
+    --corSecundaria: #696969;
+    --corBranca: #ffffff;
+    --corPreta: #000000;
+    --corCinzaEscuro: #505050;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--corCinzaEscuro);
+}
+
+.interface {
+    max-width: 1380px;
+    padding: 0 4%;
+    margin: 0 auto;
+}
+
+button {
+    background-color: transparent;
+    border: 2px solid var(--corBranca);
+    border-radius: 8px;
+    color: var(--corBranca);
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: var(--corPrimaria);
+    font-weight: bold;
+    color: var(--corSecundaria);
+}
+
+h1.titulo-section {
+    font-size: 4rem;
+    color: var(--corBranca);
+}
+
+h1.titulo-section span {
+    color: var(--corPrimaria);
+}
+
+/* Estilo do Cabeçalho */
+header {
+    background-color: transparent;
+    padding: 16px 0;
+    position: fixed;
+    width: 100%;
+    background-image: linear-gradient(to left, var(--corSecundaria) 70%, var(--corPrimaria) 30%);
+    z-index: 1;
+    transition: background 0.5s;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logotipo-cabecalho img {
+    max-width: 120px;
+}
+
+header nav.menu-desktop ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 56px;
+}
+
+header nav.menu-desktop a {
+    color: var(--corBranca);
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: 0.5s;
+}
+
+header nav.menu-desktop a:hover {
+    color: var(--corPrimaria);
+}
+
+header nav.menu-desktop button {
+    width: 144px;
+    height: 48px;
+}
+
+header.scrolled {
+    background-image: none;
+    background-color: var(--corPrimaria);
+}
+
+header.scrolled nav.menu-desktop a {
+    color: var(--corSecundaria); /* cor dos links ao rolar */
+}
+
+header.scrolled nav.menu-desktop a:hover {
+    color: var(--corBranca); /* mantém o hover */
+}
+
+header.scrolled nav.menu-desktop button {
+    background: var(--corPrimaria);
+    color: var(--corSecundaria);
+}
+
+header.scrolled nav.menu-desktop button:hover {
+    background: var(--corSecundaria);
+    color: var(--corBranca);
+}
+
+/* Estilo do menu mobile */
+.btn-menu-mobile {
+    display: none;
+}
+
+.btn-menu-mobile i {
+    font-size: 2.8rem;
+    color: var(--corSecundaria);
+}
+
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--corSecundaria);
+    text-align: right;
+    padding: 32px 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.menu-mobile ul {
+    list-style: none;
+    padding: 64px 0;
+}
+
+.menu-mobile ul li a {
+    color: var(--corPrimaria);
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding: 24px;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu-mobile ul li a:hover {
+    background-color: var(--corPrimaria);
+    color: var(--corSecundaria);
+    font-weight: bold;
+}
+
+.menu-mobile .bi-x-lg {
+    font-size: 2rem;
+    color: #f80101;
+    padding: 24px;
+}
+
+.menu-mobile.abrir-menu {
+    left: 0;
+    pointer-events: initial;
+}
+
+/* Estilo da Hero */
+section.hero {
+    background-image: linear-gradient(to left, var(--corSecundaria) 70%, var(--corPrimaria) 30%);
+    padding-top: 144px;
+}
+
+.hero > .interface {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.hero .img-hero {
+    line-height: 0;
+}
+
+.hero .img-hero img {
+    width: 500px;
+}
+
+.hero .txt-hero h1 {
+    font-size: 2.7rem;
+    color: var(--corBranca);
+    font-weight: 400;
+}
+
+.hero .txt-hero h1 span:nth-of-type(1) {
+    color: var(--corPrimaria);
+    font-weight: inherit;
+    font-size: inherit;
+    display: inline-block;
+}
+
+.hero .txt-hero h1 span {
+    color: var(--corPrimaria);
+    display: block;
+    font-weight: 800;
+    font-size: 4rem;
+}
+
+.hero .txt-hero p {
+    color: var(--corBranca);
+    line-height: 1.6;
+    font-size: 1.2rem;
+    margin: 24px 0;
+    letter-spacing: 0.8px;
+}
+
+.hero .txt-hero button {
+    width: 200px;
+    height: 48px;
+}
+
+/* Estilo sobre mim */
+section.sobre-mim {
+    padding: 120px 0;
+}
+
+.sobre-mim > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 96px;
+}
+
+.sobre-mim .txt-sobre p {
+    color: var(--corBranca);
+    text-align: justify;
+    line-height: 1.6;
+    margin: 24px 0;
+    font-size: 1.1rem;
+    letter-spacing: 0.8px;
+}
+
+.sobre-mim .btn-redes button {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.sobre-mim .btn-redes a:last-child button {
+    width: 130px;
+    font-weight: bold;
+}
+
+.sobre-mim .img-sobre img {
+    width: 500px;
+    border-radius: 16px;
+    opacity: 70%;
+}
+
+/* Estilo Habilidades */
+section.habilidades {
+    padding: 120px 0;
+    background-color: var(--corSecundaria);
+}
+
+.habilidades .titulo-section {
+    text-align: center;
+}
+
+.habilidades article {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    padding-left: 70px;
+    gap: 16px;
+    margin: 80px 0;
+}
+
+.habilidades .box-habilidades {
+    width: 200px;
+    height: 150px;
+    border: 3px solid var(--corPrimaria);
+    padding: 24px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.habilidades .box-habilidades:hover {
+    background-color: var(--corCinzaEscuro);
+
+}
+
+.box-habilidades .icon-habilidades {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.box-habilidades .icon-habilidades img {
+    width: 65px;
+}
+
+.icon-habilidades h2 {
+    color: var(--corBranca);
+    font-size: 1.4rem;
+}
+
+/* Estilo dos projetos */
+section.projetos {
+    padding: 120px 0;
+}
+
+.projetos .titulo-section {
+    text-align: center;
+}
+
+.projetos .projetos-container {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    margin: 80px 0;
+}
+
+.projetos-container .projetos-box {
+    min-width: 200px;
+    height: 400px;
+    border: 3px solid var(--corPrimaria);
+    border-radius: 16px;
+
+    background-size: cover;
+    background-position-y: 0%;
+
+    position: relative;
+}
+
+.projetos-container .projetos-box:hover {
+    background-position-y: 100%;
+}
+
+.projetos-container .projetos-box .info-projetos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #505050a1;
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--corBranca);
+    font-size: 22px;
+    font-weight: bold;
+
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.projetos-container .projetos-box .info-projetos:hover {
+    opacity: 1;
+}
+
+.projetos-container .projeto1 {
+    background-image: url(/images/img_barbearialosparcas.png);
+    transition: background-position-y 3s;
+}
+
+.projetos-container .projeto2 {
+    background-image: url(/images/img_cardapioonline.png);
+    transition: background-position-y 3s;
+}
+
+.projetos-container .projeto3 {
+    background-image: url(/images/img_sitepetshop.png);
+    transition: background-position-y 1s;
+}
+
+.projetos-container .projeto4 {
+    background-image: url(/images/img_agenciadev.png);
+    transition: background-position-y 2s;
+}
+
+/* Estilo do formulário */
+section.contato {
+    padding: 120px 0;
+    background-color: var(--corSecundaria);
+}
+
+.contato .titulo-section {
+    text-align: center;
+}
+
+.contato > .interface {
+    display: grid;
+}
+
+.contato .txt-contato p {
+    color: var(--corBranca);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 14px;
+    margin: 24px 0;
+    margin-bottom: 50px;
+}
+
+.contato .txt-contato p i {
+    color: var(--corPrimaria);
+    font-size: 1.6rem;
+}
+
+.contato form {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+}
+
+.contato form input, .contato form textarea {
+    width: 600px;
+    padding: 16px 10px;
+    background: transparent;
+    border: 2px solid var(--corPrimaria);
+    color: var(--corBranca);
+    outline: none;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.contato form textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contato form input::placeholder, .contato form textarea::placeholder {
+    color: #ffffff9c;
+}
+
+.contato form .btn-enviar {
+    display: flex;
+    justify-content: center;
+}
+
+.contato form .btn-enviar input {
+    width: 50%;
+    margin-top: 10px;
+    border: 2px solid #019b4e;
+    color: var(--corPreta);
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: var(--corPrimaria);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.contato form .btn-enviar input:hover {
+    color: var(--corBranca);
+    font-weight: bold;
+    background-color: #019b4e;
+    border: 2px solid var(--corBranca);
+}
+
+/* Estilo do footer */
+footer {
+    padding: 40px 0;
+}
+
+footer > .interface {
+    display: grid;
+    justify-content: center;
+    color: var(--corBranca);
+}
+
+footer .btn-redes {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+footer .btn-redes button {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+footer .btn-redes a:last-child button {
+    width: 130px;
+    font-weight: bold;
+}
+
+footer .logo-footer {
+    text-align: center;
+}
+
+footer .logo-footer p {
+    font-size: 1.1rem;
+}
+
+footer .logo-footer img {
+    max-width: 140px;
+    margin-bottom: 30px;
+}
