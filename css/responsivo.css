@@ -3,6 +3,7 @@
 
     h1.titulo-section {
         text-align: center;
+        padding-top: 30px;
         font-size: 2.5rem;
     }
 
@@ -124,12 +125,40 @@
     }
 
     .projetos .projetos-container {
-        grid-template: 1fr 1fr 1fr 1fr/ 1fr;
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 10px;
+    }
+
+    .projetos-container a {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
     }
 
     .projetos-container .projetos-box {
-        max-width: 300px;
-        margin: 0 auto;
+        width: 270px;
+        height: 420px;
+    }
+
+    .projetos-container .projetos-box .titulo-projetos {
+    font-size: 1.2rem;
+}
+
+    .btn-ver-mais {
+        display: none;
+    }
+
+    .projetos-extra {
+        display: block;
+        opacity: 1;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .projetos .projetos-container::-webkit-scrollbar {
+        display: none;
     }
 
     /* Estilo do formulário */

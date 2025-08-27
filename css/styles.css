@@ -173,10 +173,15 @@ header.scrolled nav.menu-desktop button:hover {
     pointer-events: initial;
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: 100vh; /* impede rolagem no mobile */
+}
+
 /* Estilo da Hero */
 section.hero {
     background-image: linear-gradient(to left, var(--corSecundaria) 70%, var(--corPrimaria) 30%);
-    padding-top: 144px;
+    padding-top: 220px;
 }
 
 .hero > .interface {
@@ -228,7 +233,7 @@ section.hero {
 
 /* Estilo sobre mim */
 section.sobre-mim {
-    padding: 120px 0;
+    padding: 150px 0;
 }
 
 .sobre-mim > .interface {
@@ -268,7 +273,7 @@ section.sobre-mim {
 
 /* Estilo Habilidades */
 section.habilidades {
-    padding: 120px 0;
+    padding: 150px 0 120px 0;
     background-color: var(--corSecundaria);
 }
 
@@ -315,7 +320,7 @@ section.habilidades {
 
 /* Estilo dos projetos */
 section.projetos {
-    padding: 120px 0;
+    padding: 150px 0 120px 0;
 }
 
 .projetos .titulo-section {
@@ -343,6 +348,32 @@ section.projetos {
 
 .projetos-container .projetos-box:hover {
     background-position-y: 100%;
+}
+
+/* título sempre fixado embaixo */
+.projetos-container .projetos-box .titulo-projetos {
+    position: absolute;     /* <--- para grudar no fundo */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+    background: #019b4ec5;
+    padding: 20px;
+    border-radius: 0 0 16px 16px;   /* canto arredondado só embaixo */
+    backdrop-filter: blur(5px);
+    border-top: 1px solid var(--vidro);
+
+    text-decoration: none;
+    text-align: center;
+    color: var(--corBranca);
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    transition: opacity 0.4s ease;
+}
+
+.projetos-container .projetos-box:hover .titulo-projetos {
+    opacity: 0;
 }
 
 .projetos-container .projetos-box .info-projetos {
@@ -390,9 +421,56 @@ section.projetos {
     transition: background-position-y 2s;
 }
 
+.projetos-container .projeto5 {
+    background-image: url(/images/img_brasil2026.png);
+    transition: background-position-y 1.5s;
+}
+
+.projetos-container .projeto6 {
+    background-image: url(/images/img_linktree.png);
+    transition: background-position-y 1.5s;
+}
+
+.projetos-extra {
+    display: block;     /* mantém no grid */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.projetos-extra.show {
+    opacity: 1;
+    max-height: 600px;      /* valor suficiente para caber o conteúdo */
+}
+
+.btn-ver-mais {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-ver-mais button {
+    width: 130px;
+    height: 50px;
+
+    background-color: transparent;
+    border: 2px solid var(--corBranca);
+    border-radius: 8px;
+    color: var(--corBranca);
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: 0.5s;
+}
+
+.btn-ver-mais button:hover {
+    background-color: var(--corPrimaria);
+    font-weight: bold;
+    color: var(--corSecundaria);
+}
+
 /* Estilo do formulário */
 section.contato {
-    padding: 120px 0;
+    padding: 150px 0 120px 0;
     background-color: var(--corSecundaria);
 }
 
