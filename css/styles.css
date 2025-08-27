@@ -44,7 +44,7 @@ button:hover {
 }
 
 h1.titulo-section {
-    font-size: 4rem;
+    font-size: 2.2rem;
     color: var(--corBranca);
 }
 
@@ -70,7 +70,7 @@ header > .interface {
 }
 
 header .logotipo-cabecalho img {
-    max-width: 120px;
+    max-width: 80px;
 }
 
 header nav.menu-desktop ul {
@@ -83,7 +83,7 @@ header nav.menu-desktop ul {
 header nav.menu-desktop a {
     color: var(--corBranca);
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     transition: 0.5s;
 }
 
@@ -92,8 +92,9 @@ header nav.menu-desktop a:hover {
 }
 
 header nav.menu-desktop button {
-    width: 144px;
-    height: 48px;
+    width: 100px;
+    height: 40px;
+    font-size: 1.1rem;
 }
 
 header.scrolled {
@@ -195,11 +196,11 @@ section.hero {
 }
 
 .hero .img-hero img {
-    width: 500px;
+    width: 400px;
 }
 
 .hero .txt-hero h1 {
-    font-size: 2.7rem;
+    font-size: 1.8rem;
     color: var(--corBranca);
     font-weight: 400;
 }
@@ -215,25 +216,26 @@ section.hero {
     color: var(--corPrimaria);
     display: block;
     font-weight: 800;
-    font-size: 4rem;
+    font-size: 2.2rem;
 }
 
 .hero .txt-hero p {
     color: var(--corBranca);
     line-height: 1.6;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 24px 0;
     letter-spacing: 0.8px;
 }
 
 .hero .txt-hero button {
-    width: 200px;
-    height: 48px;
+    width: 180px;
+    height: 40px;
+    font-size: 1.1rem;
 }
 
 /* Estilo sobre mim */
 section.sobre-mim {
-    padding: 150px 0;
+    padding: 220px 0;
 }
 
 .sobre-mim > .interface {
@@ -248,32 +250,32 @@ section.sobre-mim {
     text-align: justify;
     line-height: 1.6;
     margin: 24px 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 0.8px;
 }
 
 .sobre-mim .btn-redes button {
-    width: 56px;
-    height: 56px;
-    font-size: 24px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
     margin-top: 10px;
     margin-right: 10px;
 }
 
 .sobre-mim .btn-redes a:last-child button {
-    width: 130px;
+    width: 110px;
     font-weight: bold;
 }
 
 .sobre-mim .img-sobre img {
-    width: 500px;
+    width: 400px;
     border-radius: 16px;
     opacity: 70%;
 }
 
 /* Estilo Habilidades */
 section.habilidades {
-    padding: 150px 0 120px 0;
+    padding: 150px 0;
     background-color: var(--corSecundaria);
 }
 
@@ -284,19 +286,25 @@ section.habilidades {
 .habilidades article {
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
-    padding-left: 70px;
+    padding-left: 105px;
+    justify-content: center;
+    align-items: center;
     gap: 16px;
-    margin: 80px 0;
+    margin: 80px 50px;
 }
 
 .habilidades .box-habilidades {
-    width: 200px;
-    height: 150px;
+    width: 120px;
+    height: 100px;
     border: 3px solid var(--corPrimaria);
-    padding: 24px;
+    padding: 20px;
     border-radius: 16px;
     cursor: pointer;
     transition: 0.5s;
+    display: flex;             /* Centraliza conteúdo interno */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .habilidades .box-habilidades:hover {
@@ -305,22 +313,23 @@ section.habilidades {
 }
 
 .box-habilidades .icon-habilidades {
-    margin-bottom: 16px;
+    margin-bottom: 5px;
     text-align: center;
 }
 
 .box-habilidades .icon-habilidades img {
-    width: 65px;
+    width: 38px;
 }
 
 .icon-habilidades h2 {
     color: var(--corBranca);
-    font-size: 1.4rem;
+    font-size: 1rem;
+    text-align: center;
 }
 
 /* Estilo dos projetos */
 section.projetos {
-    padding: 150px 0 120px 0;
+    padding: 150px 0;
 }
 
 .projetos .titulo-section {
@@ -335,8 +344,8 @@ section.projetos {
 }
 
 .projetos-container .projetos-box {
-    min-width: 200px;
-    height: 400px;
+    width: 250px;
+    height: 350px;
     border: 3px solid var(--corPrimaria);
     border-radius: 16px;
 
@@ -358,7 +367,7 @@ section.projetos {
     width: 100%;
     
     background: #019b4ec5;
-    padding: 20px;
+    padding: 15px;
     border-radius: 0 0 16px 16px;   /* canto arredondado só embaixo */
     backdrop-filter: blur(5px);
     border-top: 1px solid var(--vidro);
@@ -366,7 +375,7 @@ section.projetos {
     text-decoration: none;
     text-align: center;
     color: var(--corBranca);
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bold;
 
     transition: opacity 0.4s ease;
@@ -390,7 +399,7 @@ section.projetos {
     justify-content: center;
 
     color: var(--corBranca);
-    font-size: 22px;
+    font-size: 1rem;
     font-weight: bold;
 
     opacity: 0;
@@ -450,15 +459,15 @@ section.projetos {
 }
 
 .btn-ver-mais button {
-    width: 130px;
-    height: 50px;
+    width: 110px;
+    height: 40px;
 
     background-color: transparent;
     border: 2px solid var(--corBranca);
     border-radius: 8px;
     color: var(--corBranca);
     cursor: pointer;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     transition: 0.5s;
 }
 
@@ -470,7 +479,7 @@ section.projetos {
 
 /* Estilo do formulário */
 section.contato {
-    padding: 150px 0 120px 0;
+    padding: 150px 0;
     background-color: var(--corSecundaria);
 }
 
@@ -484,7 +493,7 @@ section.contato {
 
 .contato .txt-contato p {
     color: var(--corBranca);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -496,7 +505,7 @@ section.contato {
 
 .contato .txt-contato p i {
     color: var(--corPrimaria);
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 }
 
 .contato form {
@@ -506,20 +515,20 @@ section.contato {
 }
 
 .contato form input, .contato form textarea {
-    width: 600px;
+    width: 500px;
     padding: 16px 10px;
     background: transparent;
     border: 2px solid var(--corPrimaria);
     color: var(--corBranca);
     outline: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     border-radius: 8px;
     margin-bottom: 8px;
 }
 
 .contato form textarea {
     resize: none;
-    height: 150px;
+    height: 140px;
 }
 
 .contato form input::placeholder, .contato form textarea::placeholder {
@@ -532,12 +541,12 @@ section.contato {
 }
 
 .contato form .btn-enviar input {
-    width: 50%;
+    width: 40%;
     margin-top: 10px;
     border: 2px solid #019b4e;
     color: var(--corPreta);
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     background-color: var(--corPrimaria);
     transition: 0.5s;
     cursor: pointer;
@@ -568,15 +577,15 @@ footer .btn-redes {
 }
 
 footer .btn-redes button {
-    width: 56px;
-    height: 56px;
-    font-size: 24px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
     margin-top: 10px;
     margin-right: 10px;
 }
 
 footer .btn-redes a:last-child button {
-    width: 130px;
+    width: 110px;
     font-weight: bold;
 }
 
@@ -585,10 +594,10 @@ footer .logo-footer {
 }
 
 footer .logo-footer p {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 footer .logo-footer img {
-    max-width: 140px;
+    max-width: 120px;
     margin-bottom: 30px;
 }
