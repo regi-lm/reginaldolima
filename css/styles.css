@@ -181,7 +181,7 @@ header.scrolled nav.menu-desktop button:hover {
 /* Estilo da Hero */
 section.hero {
     background-image: linear-gradient(to left, var(--corSecundaria) 70%, var(--corPrimaria) 30%);
-    padding-top: 220px;
+    padding-top: 130px;
 }
 
 .hero > .interface {
