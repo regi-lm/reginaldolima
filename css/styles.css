@@ -426,16 +426,21 @@ section.projetos {
 }
 
 .projetos-container .projeto4 {
-    background-image: url(/images/img_agenciadev.png);
+    background-image: url(/images/img_e-commerce.png);
     transition: background-position-y 2s;
 }
 
 .projetos-container .projeto5 {
-    background-image: url(/images/img_brasil2026.png);
+    background-image: url(/images/img_agenciadev.png);
     transition: background-position-y 1.5s;
 }
 
 .projetos-container .projeto6 {
+    background-image: url(/images/img_brasil2026.png);
+    transition: background-position-y 1.5s;
+}
+
+.projetos-container .projeto7 {
     background-image: url(/images/img_linktree.png);
     transition: background-position-y 1.5s;
 }
