@@ -1,363 +1,380 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Reginaldo Lima | Portfólio">
+    <meta name="description"
+        content="Reginaldo Lima | Desenvolvedor Front-End e Web especializado em sites, landing pages e aplicações modernas.">
+    <meta name="theme-color" content="#00ff7f">
 
     <meta property="og:title" content="Reginaldo Lima | Portfólio">
     <meta property="og:site_name" content="Reginaldo Lima | Portfólio">
-    <meta property="og:description" content="Olá! Me chamo Reginaldo Lima. Atuo como: Desenvolvedor Front-End | Web">
+    <meta property="og:description"
+        content="Desenvolvedor Front-End e Web criando interfaces modernas, responsivas e focadas em conversão.">
     <meta property="og:url" content="https://reginaldolima.vercel.app/">
-    <meta property="og:image" content="https://reginaldolima.vercel.app/images/logotipo.webp">
+    <meta property="og:image" content="https://reginaldolima.vercel.app/images/hero-reginaldo.jpeg">
     <meta property="og:image:type" content="image/webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" 
-    rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    
+
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/sections/header.css">
+    <link rel="stylesheet" href="./css/sections/hero.css">
+    <link rel="stylesheet" href="./css/sections/sobre.css">
+    <link rel="stylesheet" href="./css/sections/habilidades.css">
+    <link rel="stylesheet" href="./css/sections/projetos.css">
+    <link rel="stylesheet" href="./css/sections/contato.css">
+    <link rel="stylesheet" href="./css/sections/footer.css">
     <link rel="stylesheet" href="./css/responsivo.css">
 
-    <link rel="icon" type="image/x-icon" href="./images/logotipo.webp">
-
+    <link rel="icon" type="image/webp" href="./images/logotipo.webp">
     <title>Portfólio | Reginaldo Lima</title>
-
 </head>
+
 <body>
+    <header id="header">
+        <div class="interface header-content">
+            <a class="brand" href="#hero" aria-label="Voltar para o início">
+                <span>Reginaldo Lima</span>
+            </a>
 
-    <header>
-        <div class="interface">
-            <section class="logotipo-cabecalho">
-                <img src="./images/logotipo.webp" alt="Logotipo do site">
-            </section>
-
-            <nav class="menu-desktop">
+            <nav class="menu-desktop" aria-label="Navegação principal">
                 <ul>
                     <li><a href="#hero">Início</a></li>
                     <li><a href="#sobre-mim">Sobre mim</a></li>
                     <li><a href="#habilidades">Habilidades</a></li>
                     <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#contato"><button>Contato</button></a></li>
+                    <li><a class="btn btn-small" href="#contato">Contato</a></li>
                 </ul>
             </nav>
 
-            <div class="btn-menu-mobile" id="btn-menu-mobile">
+            <button class="btn-menu-mobile" id="btn-menu-mobile" aria-label="Abrir menu" aria-controls="menu-mobile"
+                aria-expanded="false">
                 <i class="bi bi-list"></i>
-            </div>
-
-            <nav class="menu-mobile" id="menu-mobile">
-                <i class="bi bi-x-lg"></i>
-                <ul>
-                    <li><a href="#hero">Início</a></li>
-                    <li><a href="#sobre-mim">Sobre mim</a></li>
-                    <li><a href="#habilidades">Habilidades</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-
+            </button>
         </div>
 
+        <nav class="menu-mobile" id="menu-mobile" aria-label="Navegação mobile">
+            <button class="btn-fechar-menu" id="btn-fechar-menu" aria-label="Fechar menu"><i
+                    class="bi bi-x-lg"></i></button>
+            <ul>
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#sobre-mim">Sobre mim</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section class="hero" id="hero">
-            <div class="interface">
-
-                <div class="img-hero">
-                    <img src="./images/foto_formal.webp" alt="Foto do profissional">
+        <section class="hero section-padding" id="hero">
+            <div class="interface hero-grid">
+                <div class="hero-text reveal">
+                    <span class="eyebrow">Desenvolvedor Front-End • Web</span>
+                    <h1>Sites modernos, responsivos e com visual que vende.</h1>
+                    <p>Olá, me chamo <strong>Reginaldo Lima</strong>. Desenvolvo interfaces, sites, landing pages e
+                        aplicações web com foco em performance, usabilidade e presença digital profissional.</p>
+                    <div class="hero-actions">
+                        <a class="btn" href="#projetos">Ver projetos</a>
+                        <a class="btn btn-outline" href="#contato">Solicitar orçamento</a>
+                    </div>
+                    <div class="hero-stats" aria-label="Resumo profissional">
+                        <div><strong>2+</strong><span>anos de prática</span></div>
+                        <div><strong>10+</strong><span>projetos online</span></div>
+                        <div><strong>100%</strong><span>responsivo</span></div>
+                    </div>
                 </div>
 
-                <div class="txt-hero">
-                    <h1>Olá! Me chamo <span>Reginaldo Lima</span>.<br>Atuo como:<span>Desenvolvedor Front-End | Web</span></h1>
-                    <p>Possuo experiência como Desenvolvedor Front-End e Web à um ano e meio, criando Interfaces, Aplicativos Web, Sites
-                        e Landing Pages com foco em responsividade para se adequar a diferentes telas, e visando a experiência do
-                        usuário final.
-                    </p>
-                    <a href="#contato"><button>Entre em contato</button></a>
+                <div class="hero-card reveal">
+                    <div class="hero-image-wrap">
+                        <img src="./images/hero-reginaldo.jpeg" alt="Foto profissional de Reginaldo Lima">
+                    </div>
+                    <div class="availability-card">
+                        <span></span>
+                        Disponível para novos projetos
+                    </div>
                 </div>
-
             </div>
         </section>
 
-        <section class="sobre-mim" id="sobre-mim">
-            <div class="interface">
+        <section class="sobre-mim section-padding" id="sobre-mim">
+            <div class="interface sobre-grid">
+                <div class="sobre-image reveal">
+                    <img src="./images/Img_sobre.jpeg" alt="Reginaldo Lima trabalhando com desenvolvimento web">
+                </div>
 
-                <div class="txt-sobre">
-                    <h1 class="titulo-section">Sobre <span>mim</span></h1>
-                    <p>
-                        Sou formado em Análise e Desenvolvimento de Sistemas pela Faci Wyden, em Belém/PA.
-                        Durante o curso, me interessei e aprofundei meus conhecimentos no Desenvolvimento Web, onde 
-                        há uma ampla gama de tecnologias para se utilizar na Programação.
-                    </p>
-                    <p>
-                        Ao longo do meu aprendizado, pude obter conhecimentos necessários para começar a programar Interfaces Web, 
-                        Sites e Landing Pages, utilizando tecnologias como HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, Sass, React, 
-                        Next js, Node js, Git e MySQL.
-                    </p>
+                <div class="sobre-content reveal">
+                    <span class="eyebrow">Sobre mim</span>
+                    <h2 class="titulo-section">Transformo ideias em experiências digitais.</h2>
+                    <p>Sou formado em Análise e Desenvolvimento de Sistemas pela Faci Wyden, em Belém/PA. Minha base é
+                        desenvolvimento web, com foco em interfaces limpas, responsivas e fáceis de usar.</p>
+                    <p>Utilizo ferramentas como HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, Sass, React, Next.js,
+                        Node.js, Git e MySQL para criar soluções visuais e funcionais.</p>
 
-                    <div class="btn-redes">
-                        <a href="https://www.linkedin.com/in/reginaldolimadev" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
-                        <a href="https://github.com/regi-lm" target="_blank"><button><i class="bi bi-github"></i></button></a>
-                        <a href="doc/Curriculo ReginaldoLima.pdf" target="_blank"><button>Currículo</button></a>
+                    <div class="sobre-lista">
+                        <div><i class="bi bi-check2-circle"></i> Layouts modernos e minimalistas</div>
+                        <div><i class="bi bi-check2-circle"></i> Código organizado e reutilizável</div>
+                        <div><i class="bi bi-check2-circle"></i> Foco em Vercel, SEO e performance</div>
+                    </div>
+
+                    <div class="social-actions">
+                        <a class="icon-btn" href="https://www.linkedin.com/in/reginaldolimadev" target="_blank"
+                            rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a class="icon-btn" href="https://github.com/regi-lm" target="_blank" rel="noopener"
+                            aria-label="GitHub"><i class="bi bi-github"></i></a>
+                        <a class="btn btn-small" href="./doc/Curriculo ReginaldoLima.pdf" target="_blank"
+                            rel="noopener">Currículo</a>
                     </div>
                 </div>
-                
-                <div class="img-sobre">
-                    <img src="./images/Img_sobre.jpeg" alt="Imagem sobre mim">
-                </div>
-
             </div>
         </section>
 
-        <section class="habilidades" id="habilidades">
+        <section class="habilidades section-padding" id="habilidades">
             <div class="interface">
-                <h1 class="titulo-section">Minhas <span>habilidades</span></h1>
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Stack principal</span>
+                    <h2 class="titulo-section">Habilidades técnicas</h2>
+                </div>
 
-                <article>
-                    <div class="box-habilidades">
-                        <div class="icon-habilidades">
-                            <img src="./images/icons8-html-5-48.png" alt="Icon do HTML5">
-                            <h2>HTML5</h2>
-                        </div>
-
-                    </div>
-
-                    <div class="box-habilidades">
-                        <div class="icon-habilidades">
-                            <img src="./images/icons8-css3-48.png" alt="Icon do CSS3">
-                            <h2>CSS3</h2>
-                        </div>
-
-                    </div>
-
-                    <div class="box-habilidades">
-                        <div class="icon-habilidades">
-                            <img src="./images/icons8-javascript-48.png" alt="Icon do JavaScript">
-                            <h2>JavaScript</h2>
-                        </div>
-
-                    </div>
-
-                    <div class="box-habilidades">
-                        <div class="icon-habilidades">
-                            <img src="./images/icons8-bootstrap-48.png" alt="Icon do Bootstrap">
-                            <h2>Bootstrap</h2>
-                        </div>
-
-                    </div>
-
-                    <div class="box-habilidades">
-                        <div class="icon-habilidades">
-                            <img src="./images/icons8-tailwind-css-48.png" alt="Icon do Tailwind CSS">
-                            <h2>Tailwind CSS</h2>
-                        </div>
-
-                    </div>
-
-                    <div class="box-habilidades">
-                        <div class="icon-habilidades">
-                            <img src="./images/icons8-atrevimento-48.png" alt="Icon do Sass">
-                            <h2>Sass</h2>
-                        </div>
-
-                    </div>
-
-                    <div class="box-habilidades">
-                        <div class="icon-habilidades">
-                            <img src="./images/icons8-react-48.png" alt="Icon do React">
-                            <h2>React</h2>
-                        </div>
-
-                    </div>
-
-                    <div class="box-habilidades">
-                        <div class="icon-habilidades">
-                            <img src="./images/icons8-nextjs-48.png" alt="Icon do Next js">
-                            <h2>Next js</h2>
-                        </div>
-
-                    </div>
-
-                    <div class="box-habilidades">
-                        <div class="icon-habilidades">
-                            <img src="./images/icons8-nodejs-48.png" alt="Icon do Node js">
-                            <h2>Node js</h2>
-                        </div>
-
-                    </div>
-
-                    <div class="box-habilidades">
-                        <div class="icon-habilidades">
-                            <img src="./images/icons8-mysql-48.png" alt="Icon do MySQL">
-                            <h2>MySQL</h2>
-                        </div>
-
-                    </div>
-
-                    <div class="box-habilidades">
-                        <div class="icon-habilidades">
-                            <img src="./images/icons8-git-48.png" alt="Icon do Git">
-                            <h2>Git</h2>
-                        </div>
-
-                    </div>
-
-                    <div class="box-habilidades">
-                        <div class="icon-habilidades">
-                            <img src="./images/icons8-github-48.png" alt="Icon do GitHub">
-                            <h2>GitHub</h2>
-                        </div>
-
-                    </div>
-
-                </article>
-
+                <div class="habilidades-grid reveal">
+                    <article class="skill-card"><img src="./images/icons8-html-5-48.png" alt="HTML5">
+                        <h3>HTML5</h3>
+                    </article>
+                    <article class="skill-card"><img src="./images/icons8-css3-48.png" alt="CSS3">
+                        <h3>CSS3</h3>
+                    </article>
+                    <article class="skill-card"><img src="./images/icons8-javascript-48.png" alt="JavaScript">
+                        <h3>JavaScript</h3>
+                    </article>
+                    <article class="skill-card"><img src="./images/icons8-bootstrap-48.png" alt="Bootstrap">
+                        <h3>Bootstrap</h3>
+                    </article>
+                    <article class="skill-card"><img src="./images/icons8-tailwind-css-48.png" alt="Tailwind CSS">
+                        <h3>Tailwind CSS</h3>
+                    </article>
+                    <article class="skill-card"><img src="./images/icons8-atrevimento-48.png" alt="Sass">
+                        <h3>Sass</h3>
+                    </article>
+                    <article class="skill-card"><img src="./images/icons8-react-48.png" alt="React">
+                        <h3>React</h3>
+                    </article>
+                    <article class="skill-card"><img src="./images/icons8-nextjs-48.png" alt="Next.js">
+                        <h3>Next.js</h3>
+                    </article>
+                    <article class="skill-card"><img src="./images/icons8-nodejs-48.png" alt="Node.js">
+                        <h3>Node.js</h3>
+                    </article>
+                    <article class="skill-card"><img src="./images/icons8-mysql-48.png" alt="MySQL">
+                        <h3>MySQL</h3>
+                    </article>
+                    <article class="skill-card"><img src="./images/icons8-git-48.png" alt="Git">
+                        <h3>Git</h3>
+                    </article>
+                    <article class="skill-card"><img src="./images/icons8-github-48.png" alt="GitHub">
+                        <h3>GitHub</h3>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <section class="projetos" id="projetos">
+        <section class="projetos section-padding" id="projetos">
             <div class="interface">
-                <h1 class="titulo-section">Meus <span>projetos</span></h1>
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Portfólio</span>
+                    <h2 class="titulo-section">Projetos em destaque</h2>
+                </div>
 
-                <article class="projetos-container">
+                <div class="project-filters reveal" aria-label="Filtros de projetos">
+                    <button class="filter-btn active" type="button" data-filter="todos">Todos</button>
+                    <button class="filter-btn" type="button" data-filter="site">Sites</button>
+                    <button class="filter-btn" type="button" data-filter="landing">Landing pages</button>
+                    <button class="filter-btn" type="button" data-filter="app">Apps</button>
+                </div>
 
-                    <a href="https://barbearialosparcas.vercel.app/" target="_blank">
-                        <div class="projetos-box projeto1">
-                            <div class="titulo-projetos">
-                                Barbearia Los Parças
-                            </div>
-                            <div class="info-projetos">
-                                Barbearia Los Parças
-                            </div>
+                <div class="projetos-container reveal">
+
+                    <a class="project-card" href="https://barbearialosparcas.vercel.app/" target="_blank" rel="noopener"
+                        data-category="site">
+                        <div class="project-image">
+                            <img src="./images/img_barbearialosparcas.png" alt="Projeto Barbearia Los Parças">
+                        </div>
+                        <div class="project-content">
+                            <span>Site institucional</span>
+                            <h3>Barbearia Los Parças</h3>
+                            <p>Experiência digital para barbearia com foco em apresentação e conversão.</p>
+                            <i class="bi bi-arrow-up-right"></i>
                         </div>
                     </a>
 
-                    <a href="https://cardapioonline-plum.vercel.app/" target="_blank">
-                        <div class="projetos-box projeto2">
-                            <div class="titulo-projetos">
-                                Cardápio Online
-                            </div>
-                            <div class="info-projetos">
-                                Cardápio Online
-                            </div>
+                    <a class="project-card" href="https://cardapioonline-plum.vercel.app" target="_blank" rel="noopener"
+                        data-category="app">
+                        <div class="project-image">
+                            <img src="./images/img_cardapioonline.png" alt="Projeto Cardápio Online">
+                        </div>
+                        <div class="project-content">
+                            <span>Aplicação Web</span>
+                            <h3>Cardápio Online</h3>
+                            <p>Cardápio digital prático, direto e preparado para atendimento via internet.</p>
+                            <i class="bi bi-arrow-up-right"></i>
                         </div>
                     </a>
 
-                    <a href="https://petshopdev-alpha.vercel.app/" target="_blank">
-                        <div class="projetos-box projeto3">
-                            <div class="titulo-projetos">
-                                Site para Petshop
-                            </div>
-                            <div class="info-projetos">
-                                Site para Petshop
-                            </div>
+                    <a class="project-card" href="https://petshopdev-alpha.vercel.app/" target="_blank" rel="noopener"
+                        data-category="site">
+                        <div class="project-image">
+                            <img src="./images/img_sitepetshop.png" alt="Projeto PetShop Dev">
+                        </div>
+                        <div class="project-content">
+                            <span>Site comercial</span>
+                            <h3>Site para Petshop</h3>
+                            <p>Layout amigável para negócios locais com identidade visual leve.</p>
+                            <i class="bi bi-arrow-up-right"></i>
                         </div>
                     </a>
 
-                    <a href="https://e-commerce-mu-eight-75.vercel.app/" target="_blank">
-                        <div class="projetos-box projeto4">
-                            <div class="titulo-projetos">
-                                E-commerce.Dev
-                            </div>
-                            <div class="info-projetos">
-                                E-commerce.Dev
-                            </div>
+                    <a class="project-card" href="https://e-commerce-mu-eight-75.vercel.app/" target="_blank"
+                        rel="noopener" data-category="site">
+                        <div class="project-image">
+                            <img src="./images/img_ecommerce.png" alt="Projeto E-commerce">
+                        </div>
+                        <div class="project-content">
+                            <span>E-commerce</span>
+                            <h3>E-commerce.Dev</h3>
+                            <p>Interface de loja virtual com vitrine, navegação e visual de produto.</p>
+                            <i class="bi bi-arrow-up-right"></i>
                         </div>
                     </a>
 
-                    <a href="https://agenciadev.vercel.app/" target="_blank" class="projetos-extra">
-                        <div class="projetos-box projeto5">
-                            <div class="titulo-projetos">
-                                Agência Dev
-                            </div>
-                            <div class="info-projetos">
-                                Agência Dev
-                            </div>
+                    <a class="project-card projetos-extra" href="https://agenciadev.vercel.app/" target="_blank"
+                        rel="noopener" data-category="landing">
+                        <div class="project-image">
+                            <img src="./images/img_agenciadev.png" alt="Projeto Agência Dev">
+                        </div>
+                        <div class="project-content">
+                            <span>Landing page</span>
+                            <h3>Agência Dev</h3>
+                            <p>Página de apresentação para serviços digitais com chamada comercial.</p>
+                            <i class="bi bi-arrow-up-right"></i>
                         </div>
                     </a>
 
-                    <a href="https://brasil2026.vercel.app/" target="_blank" class="projetos-extra">
-                        <div class="projetos-box projeto6">
-                            <div class="titulo-projetos">
-                                Convocação 2026
-                            </div>
-                            <div class="info-projetos">
-                                Convocação 2026
-                            </div>
+                    <a class="project-card projetos-extra" href="https://brasil2026.vercel.app/" target="_blank"
+                        rel="noopener" data-category="app">
+                        <div class="project-image">
+                            <img src="./images/img_brasil2026.png" alt="Projeto Brasil 2026">
+                        </div>
+                        <div class="project-content">
+                            <span>Aplicação web</span>
+                            <h3>Convocação 2026</h3>
+                            <p>Experiência temática com foco em design visual e interação.</p>
+                            <i class="bi bi-arrow-up-right"></i>
                         </div>
                     </a>
 
-                    <a href="https://linktreegoku.vercel.app/" target="_blank" class="projetos-extra">
-                        <div class="projetos-box projeto7">
-                            <div class="titulo-projetos">
-                                Linktree
-                            </div>
-                            <div class="info-projetos">
-                                Linktree
-                            </div>
+                    <a class="project-card projetos-extra" href="https://linktreegoku.vercel.app/" target="_blank"
+                        rel="noopener" data-category="landing">
+                        <div class="project-image">
+                            <img src="./images/img_linktree.png" alt="Projeto Linktree">
+                        </div>
+                        <div class="project-content">
+                            <span>Link page</span>
+                            <h3>Linktree</h3>
+                            <p>Página compacta para centralizar links e presença digital.</p>
+                            <i class="bi bi-arrow-up-right"></i>
                         </div>
                     </a>
 
-                </article>
+                </div>
 
                 <div class="btn-ver-mais">
-                    <button id="btnVerMais">Ver mais</button>
+                    <button class="btn btn-outline" id="btnVerMais" type="button">Ver mais projetos</button>
                 </div>
             </div>
         </section>
 
-        <section class="contato" id="contato">
-            <div class="interface">
-                <div class="txt-contato">
-                    <h1 class="titulo-section">
-                        Entre em <span>contato</span>
-                    </h1>
-                    <p><i class="bi bi-envelope-at"></i> djreginaldo3003@hotmail.com</p>
+        <section class="contato section-padding" id="contato">
+            <div class="interface contato-grid">
+                <div class="contato-info reveal">
+                    <span class="eyebrow">Contato</span>
+                    <h2 class="titulo-section">Vamos tirar sua ideia do papel?</h2>
+                    <p>Me envie uma mensagem e eu retorno com uma direção clara para o seu site, landing page ou
+                        aplicação web.</p>
+                    <a class="contact-link" href="mailto:djreginaldo3003@hotmail.com"><i class="bi bi-envelope-at"></i>
+                        djreginaldo3003@hotmail.com</a>
                 </div>
 
-                <form id="form-whatsapp">
-                    <input type="text" id="nome" placeholder="Digite seu nome e sobrenome" required>
-                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
-                    <textarea id="mensagem" placeholder="Qual assunto você quer tratar ?" required></textarea>
-                    
-                    <div class="btn-enviar">
-                        <input type="submit" value="Enviar">
-                    </div>
+                <form id="form-whatsapp" class="contact-form reveal" novalidate>
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" minlength="3" required>
+                    <small class="field-error"></small>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    <small class="field-error"></small>
+
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Conte rapidamente o que você precisa"
+                        minlength="10" required></textarea>
+                    <small class="field-error"></small>
+
+                    <button class="btn" type="submit"><i class="bi bi-whatsapp"></i> Enviar pelo WhatsApp</button>
                 </form>
-
             </div>
         </section>
-
     </main>
 
     <footer>
-        <div class="interface">
-            <div class="btn-redes">
-                <a href="https://www.linkedin.com/in/reginaldolimadev" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
-                <a href="https://github.com/regi-lm" target="_blank"><button><i class="bi bi-github"></i></button></a>
-                <a href="doc/Curriculo ReginaldoLima.pdf" target="_blank"><button>Currículo</button></a>
+        <div class="interface footer-grid">
+            <div class="footer-brand">
+                <h2>Reginaldo Lima</h2>
+                <p>Desenvolvimento front-end e web moderno para marcas, negócios e profissionais
+                    que querem aparecer melhor nainternet.</p>
             </div>
 
-            <div class="logo-footer">
-                <img src="./images/logotipo.webp" alt="Logotipo do footer">
-                <p>Copyright © 2025 | Regi Lima.</p>
-                <p>Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <h3>Navegação</h3>
+                <a href="#hero">Início</a>
+                <a href="#sobre-mim">Sobre mim</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
             </div>
 
+            <div class="footer-contact">
+                <h3>Conecte-se</h3>
+                <div class="social-actions">
+                    <a class="icon-btn" href="https://www.linkedin.com/in/reginaldolimadev" target="_blank"
+                        rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a class="icon-btn" href="https://github.com/regi-lm" target="_blank" rel="noopener"
+                        aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    <a class="icon-btn" href="./doc/Curriculo ReginaldoLima.pdf" target="_blank" rel="noopener"
+                        aria-label="Currículo"><i class="bi bi-file-earmark-person"></i></a>
+                </div>
+                <a class="footer-email" href="mailto:djreginaldo3003@hotmail.com">djreginaldo3003@hotmail.com</a>
+            </div>
         </div>
 
+        <div class="interface footer-bottom">
+            <p>© <span id="currentYear"></span> Reginaldo Lima. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
-    <script src="/js/menu_scroll.js"></script>
-    <script src="/js/menu_mobile.js"></script>
-    <script src="/js/btn_ver_mais.js"></script>
-    <script src="/js/form.js"></script>
-    
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Voltar ao topo"><i
+            class="bi bi-arrow-up"></i></button>
+
+    <script src="./js/menu_scroll.js"></script>
+    <script src="./js/menu_mobile.js"></script>
+    <script src="./js/btn_ver_mais.js"></script>
+    <script src="./js/projects_filter.js"></script>
+    <script src="./js/reveal.js"></script>
+    <script src="./js/back_to_top.js"></script>
+    <script src="./js/form.js"></script>
 </body>
+
 </html>

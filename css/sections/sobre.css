@@ -1,0 +1,47 @@
+/* =========================================================
+   Seção Sobre mim
+   ========================================================= */
+
+.sobre-mim {
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.sobre-image img {
+    width: 100%;
+    aspect-ratio: 4 / 4.6;
+    object-fit: cover;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--sombra-card);
+}
+
+.sobre-content p {
+    margin-top: 20px;
+    color: var(--cor-texto-suave);
+    line-height: 1.8;
+}
+
+.sobre-lista {
+    display: grid;
+    gap: 12px;
+    margin: 28px 0;
+}
+
+.sobre-lista div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--cor-texto);
+    font-weight: 700;
+}
+
+.sobre-lista i {
+    color: var(--cor-primaria);
+}

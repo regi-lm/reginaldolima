@@ -1,26 +1,59 @@
+// Valida o formulário e envia a mensagem formatada para o WhatsApp.
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('form-whatsapp');
 
-document.getElementById("form-whatsapp").addEventListener("submit", function(e){
-    e.preventDefault(); // Evita envio padrão
+    if (!form) return;
 
-    // Pega os valores
-    let nome = document.getElementById("nome").value;
-    let email = document.getElementById("email").value;
-    let mensagem = document.getElementById("mensagem").value;
+    const telefone = '5591984536649';
 
-    // Número de destino (substitua pelo seu número com DDI e DDD, ex: 5511999998888)
-    let telefone = "5591984536649";
+    const setError = (field, message) => {
+        const errorElement = field.nextElementSibling;
+        if (errorElement && errorElement.classList.contains('field-error')) {
+            errorElement.textContent = message;
+        }
+    };
 
-    // Monta a mensagem
-    let texto = `Olá, meu nome é ${nome}.%0A` +
-                `Meu e-mail: ${email}.%0A` +
-                `Assunto: ${mensagem}`;
+    const validateField = (field) => {
+        const value = field.value.trim();
 
-    // Redireciona para o WhatsApp
-    let url = `https://wa.me/${telefone}?text=${texto}`;
+        if (!value) {
+            setError(field, 'Este campo é obrigatório.');
+            return false;
+        }
 
-    // Abre o WhatsApp
-    window.open(url, "_blank");
+        if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+            setError(field, 'Digite um e-mail válido.');
+            return false;
+        }
 
-    // Limpa os campos do formulário
-    this.reset();
+        if (field.minLength > 0 && value.length < field.minLength) {
+            setError(field, `Digite pelo menos ${field.minLength} caracteres.`);
+            return false;
+        }
+
+        setError(field, '');
+        return true;
+    };
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const nome = document.getElementById('nome');
+        const email = document.getElementById('email');
+        const mensagem = document.getElementById('mensagem');
+        const campos = [nome, email, mensagem];
+        const formularioValido = campos.every(validateField);
+
+        if (!formularioValido) return;
+
+        const texto = `Olá, meu nome é ${nome.value.trim()}.\nMeu e-mail: ${email.value.trim()}.\nAssunto: ${mensagem.value.trim()}`;
+        const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
+
+        window.open(url, '_blank', 'noopener');
+        form.reset();
+    });
+
+    form.querySelectorAll('input, textarea').forEach((field) => {
+        field.addEventListener('input', () => validateField(field));
+    });
 });

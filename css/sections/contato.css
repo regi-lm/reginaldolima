@@ -1,0 +1,85 @@
+/* =========================================================
+   Seção Contato
+   ========================================================= */
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+    gap: 54px;
+}
+
+.contato-info p {
+    max-width: 520px;
+    margin: 20px 0 28px;
+    color: var(--cor-texto-suave);
+    line-height: 1.8;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--cor-texto);
+    font-weight: 800;
+}
+
+.contact-link i {
+    color: var(--cor-primaria);
+    font-size: 1.25rem;
+}
+
+.contact-form {
+    display: grid;
+    padding: 28px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    background: var(--cor-card);
+    box-shadow: var(--sombra-card);
+}
+
+.contact-form label {
+    margin-bottom: 8px;
+    color: var(--cor-texto);
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px 16px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-sm);
+    outline: none;
+    background: rgba(255, 255, 255, 0.055);
+    color: var(--cor-texto);
+    transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--cor-primaria);
+    background: rgba(255, 255, 255, 0.075);
+}
+
+.contact-form textarea {
+    min-height: 142px;
+    resize: vertical;
+}
+
+.contact-form ::placeholder {
+    color: rgba(247, 249, 251, 0.46);
+}
+
+.field-error {
+    min-height: 20px;
+    margin: 5px 0 10px;
+    color: #ff8a8a;
+    font-size: 0.8rem;
+}
+
+.contact-form .btn {
+    width: 100%;
+    margin-top: 4px;
+}

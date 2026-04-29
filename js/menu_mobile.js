@@ -1,33 +1,28 @@
+// Abre e fecha o menu mobile com acessibilidade básica.
+document.addEventListener('DOMContentLoaded', () => {
+    const btnAbrir = document.querySelector('#btn-menu-mobile');
+    const btnFechar = document.querySelector('#btn-fechar-menu');
+    const menuMobile = document.querySelector('#menu-mobile');
+    if (!btnAbrir || !btnFechar || !menuMobile) return;
+    const linksMenu = menuMobile.querySelectorAll('a');
 
-const btnAbrirMenuMobile = document.querySelector('#btn-menu-mobile'); 
-const menuMobile = document.querySelector('#menu-mobile');
-const body = document.body;
+    const abrirMenu = () => {
+        menuMobile.classList.add('abrir-menu');
+        document.body.classList.add('no-scroll');
+        btnAbrir.setAttribute('aria-expanded', 'true');
+    };
 
-// abrir menu
-btnAbrirMenuMobile.addEventListener('click', () => {
-    menuMobile.classList.add('abrir-menu');
-    body.classList.add('no-scroll'); // trava scroll
-});
-
-// fechar menu (clicando em qualquer parte do nav)
-menuMobile.addEventListener('click', () => {
-    menuMobile.classList.remove('abrir-menu');
-    body.classList.remove('no-scroll'); // libera scroll
-});
-
-// fechar menu clicando em links
-menuMobile.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
+    const fecharMenu = () => {
         menuMobile.classList.remove('abrir-menu');
-        body.classList.remove('no-scroll');
+        document.body.classList.remove('no-scroll');
+        btnAbrir.setAttribute('aria-expanded', 'false');
+    };
+
+    btnAbrir.addEventListener('click', abrirMenu);
+    btnFechar.addEventListener('click', fecharMenu);
+    linksMenu.forEach((link) => link.addEventListener('click', fecharMenu));
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') fecharMenu();
     });
 });
-
-// fechar menu clicando no X (ícone dentro do menu)
-const btnFechar = menuMobile.querySelector('.bi-x-lg');
-if (btnFechar) {
-    btnFechar.addEventListener('click', () => {
-        menuMobile.classList.remove('abrir-menu');
-        body.classList.remove('no-scroll');
-    });
-}
